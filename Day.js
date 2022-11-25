@@ -110,3 +110,20 @@ const reverseArray = (arr) => {
 }
 
 console.log(reverseArray(["A", "B", "C"]));
+
+
+/* 2.d. Write a function which check if items of an array are unique? */
+
+const checkUniqueness = arr => {
+    for(let i = 0; i < arr.length; i++) {
+        if(arr.indexOf(arr[i]) !== arr.lastIndexOf(arr[i])) {
+            return false
+        }
+    }
+    return true
+} 
+
+const arrOne = [1, 4, 6, 2, 1];
+console.log(checkUniqueness(arrOne));
+const arrTwo = [1, 4, 6, 2, 3]
+console.log(checkUniqueness(arrTwo));
