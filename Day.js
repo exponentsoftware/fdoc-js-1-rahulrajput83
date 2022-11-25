@@ -81,3 +81,19 @@ const loop = () => {
 }
 
 loop();
+
+
+/* 2.b. Write a function which returns array of seven random numbers in a range of 0-9. All the numbers must be unique */
+
+const unique = () => {
+    const arr = []
+    for(let i = 0; i < 7; i++) {
+        let number = Math.floor(Math.random() * 10);
+        if(number < 10 && arr.indexOf(number) === -1 && number > -1) {
+            arr.push(number)
+        }
+    }
+    return arr
+}
+
+console.log(unique())
