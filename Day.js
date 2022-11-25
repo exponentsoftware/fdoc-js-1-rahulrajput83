@@ -97,3 +97,16 @@ const unique = () => {
 }
 
 console.log(unique())
+
+
+/* Reversing an array: Arrays have a reverse method which changes the array by inverting the order in which its elements appear. For this exercise, write a function, reverseArray. The  reverseArray, takes an array as argument and produces a new array that has the same elements in the inverse order. Without reverse method. */
+
+const reverseArray = (arr) => {
+    let Array = [];
+    for(let i = arr.length - 1; i >= 0; i--) {
+        Array.push(arr[i]);
+    }
+    return Array
+}
+
+console.log(reverseArray(["A", "B", "C"]));
