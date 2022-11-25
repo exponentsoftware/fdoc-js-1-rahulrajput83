@@ -68,3 +68,16 @@ const variety = paragraph => {
     return arr.length;
 }
 console.log(variety(sentenceCount))
+
+
+/* 2.a. Looping a triangle: Write a loop that makes seven calls to console.log to output the following triangle: */
+
+const loop = () => {
+    let tri = ''
+    for(let i = 0; i < 7; i++) {
+        tri += '#'
+        console.log(tri)
+    }
+}
+
+loop();
