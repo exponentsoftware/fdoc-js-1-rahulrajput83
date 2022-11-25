@@ -32,3 +32,21 @@ const sentFunction = (paragraph) => {
 }
 
 console.log(sentFunction(sentence))
+
+
+/* 1.c. After cleaning the text in the sentence from question number b you will get the following text. Count the number of words in this text. Don't include words with only one letter. */
+
+const sentenceCount =  `I am a teacher and I love teaching. There is nothing as more rewarding as educating and empowering people. I found teaching more interesting than any other jobs. Does this motivate you to be a teacher?`
+
+const countFunc = (para) => {
+    const arr  = para.split(" ");
+    const arrLength = [];
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i].length > 1) {
+            arrLength.push(arr[i])
+        }
+    }
+    return arrLength.length
+}
+
+console.log(countFunc(sentenceCount));
