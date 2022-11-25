@@ -50,3 +50,21 @@ const countFunc = (para) => {
 }
 
 console.log(countFunc(sentenceCount));
+
+/* 1.d. How many words were used to construct this sentence. Now, don't exclude one letter words. */
+
+const variety = paragraph => {
+    const arr = paragraph.replaceAll(/[^a-zA-Z0-9 :]/g, '').split(" ")
+    for (let i = 0; i < arr.length; i++) {
+        for(let j = i + 1; j < arr.length; j++) {
+            if(arr[i] === arr[j]) {
+                swap = arr[j];
+                arr[j] = arr[arr.length - 1];
+                arr[arr.length - 1] = swap;
+                arr.pop();
+            }
+        }
+    }
+    return arr.length;
+}
+console.log(variety(sentenceCount))
