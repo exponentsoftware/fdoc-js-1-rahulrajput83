@@ -21,3 +21,14 @@ first(paragraph)
 
 console.log(`The word ${obj.love > obj.you ? 'love' : 'you'} more frequently occurred than ${obj.love < obj.you ? 'love' : 'you'}.`);
 
+
+
+/* 1.b. Write a function called ***cleanText***. The function takes raw text as a parameter and returns the clean text. */
+
+const sentence = `%I $am@% a %tea@cher%, &and& I lo%#ve %tea@ching%;. There $is nothing; &as& mo@re rewarding as educa@ting &and& @emp%o@wering peo@ple. ;I found tea@ching m%o@re interesting tha@n any other %jo@bs. %Do@es thi%s mo@tivate yo@u to be a tea@cher!?`;
+
+const sentFunction = (paragraph) => {
+    return paragraph.replaceAll(/[`~!@#$%^&*()_|+\-=;:'"`]/gi, '')
+}
+
+console.log(sentFunction(sentence))
