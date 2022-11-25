@@ -20,3 +20,4 @@ const first = (paragraph) => {
 first(paragraph)
 
 console.log(`The word ${obj.love > obj.you ? 'love' : 'you'} more frequently occurred than ${obj.love < obj.you ? 'love' : 'you'}.`);
+
